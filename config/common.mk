@@ -155,6 +155,9 @@ USE_DEX2OAT_DEBUG := false
 PRODUCT_PACKAGES += \
     AudioFX
 
+# Disable vendor restrictions
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     Calculator \

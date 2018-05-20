@@ -1,4 +1,4 @@
-# Copyright (C) 2019 CandyRoms
+# Copyright (C) 2019-2021 CandyRoms
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,23 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# We modify several neverallows, so let the build proceed
-ifneq ($(TARGET_BUILD_VARIANT),user)
-SELINUX_IGNORE_NEVERALLOWS := true
-endif
-
-BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/candy/build/core/system_rro.mk
-
-# Include board/platform macros
-include vendor/candy/build/core/utils.mk
-
-# Include vendor platform definitions
-include vendor/candy/build/core/vendor/*.mk
-
 # Rules for QCOM targets
 include $(TOPDIR)vendor/candy/build/core/qcom_target.mk
 
-# Filter out duplicates
-define uniq
-$(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
-endef

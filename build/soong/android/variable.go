@@ -41,6 +41,9 @@ type Product_variables struct {
 	Uses_qcom_bsp_legacy struct {
 		Cppflags []string
 	}
+	Uses_metadata_as_fde_key struct {
+		Cflags []string
+	}
 	Uses_qti_camera_device struct {
 		Cppflags []string
 		Shared_libs []string
@@ -63,6 +66,7 @@ type ProductVariables struct {
 	Target_shim_libs  *string `json:",omitempty"`
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Uses_qcom_bsp_legacy  *bool `json:",omitempty"`
+	Uses_metadata_as_fde_key  *bool `json:",omitempty"`
 	Uses_qti_camera_device  *bool `json:",omitempty"`
 	QTIAudioPath            *string `json:",omitempty"`
 	QTIDisplayPath          *string `json:",omitempty"`

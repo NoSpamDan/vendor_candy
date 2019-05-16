@@ -112,10 +112,6 @@ ifeq ($(HOST_OS),darwin)
   KERNEL_MAKE_FLAGS += LIBRARY_PATH=/usr/local/opt/openssl/lib
 endif
 
-ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)
-  KERNEL_MAKE_FLAGS += $(TARGET_KERNEL_ADDITIONAL_FLAGS)
-endif
-
 # Set DTBO image locations so the build system knows to build them
 ifeq ($(TARGET_NEEDS_DTBOIMAGE),true)
 BOARD_PREBUILT_DTBOIMAGE ?= $(PRODUCT_OUT)/dtbo/arch/$(KERNEL_ARCH)/boot/dtbo.img
@@ -123,5 +119,3 @@ else ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
 BOARD_PREBUILT_DTBOIMAGE ?= $(PRODUCT_OUT)/dtbo-pre.img
 endif
 
-# Set use the full path to the make command
-KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_OS)-x86/bin/make

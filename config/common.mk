@@ -92,11 +92,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Don't export PS1 in /system/etc/mkshrc.
-PRODUCT_COPY_FILES += \
-    vendor/candy/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/candy/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
-
 # Candy-specific startup services
 PRODUCT_COPY_FILES += \
     vendor/candy/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \

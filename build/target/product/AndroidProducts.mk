@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2018-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,3 +18,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/candy_arm.mk \
     $(LOCAL_DIR)/candy_arm64.mk \
     $(LOCAL_DIR)/candy_x86.mk
+
+COMMON_LUNCH_CHOICES := \
+    candy_arm-userdebug \
+    candy_arm64-userdebug \
+    candy_x86-userdebug

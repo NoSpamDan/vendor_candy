@@ -33,6 +33,9 @@ type Product_variables struct {
 	Needs_text_relocations struct {
 		Cppflags []string
 	}
+	Target_init_vendor_lib struct {
+		Whole_static_libs []string
+	}
 	Target_process_sdk_version_override struct {
 		Cppflags []string
 	}
@@ -86,6 +89,7 @@ type ProductVariables struct {
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Target_specific_headers_include_dir  *string `json:",omitempty"`
 	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
+	Target_init_vendor_lib  *string `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Target_process_sdk_version_override *string `json:",omitempty"`
 	Target_shim_libs  *string `json:",omitempty"`

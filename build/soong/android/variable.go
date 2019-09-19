@@ -63,6 +63,9 @@ type Product_variables struct {
 	Needs_netd_direct_connect_rule struct {
 		Cflags []string
 	}
+	Supports_extended_compress_format struct {
+		Cflags []string
+	}
 	Build_pixelgapps struct {
 		Cflags []string
 	}
@@ -81,6 +84,7 @@ type ProductVariables struct {
     Needs_text_relocations  *bool `json:",omitempty"`
     Target_specific_headers_include_dir  *string `json:",omitempty"`
     Specific_camera_parameter_library  *string `json:",omitempty"`
+	Supports_extended_compress_format  *bool `json:",omitempty"`
     Supports_hw_fde  *bool `json:",omitempty"`
     Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`

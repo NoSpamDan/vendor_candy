@@ -3,8 +3,6 @@ ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
 
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
 
-INSTALLED_DTBOIMAGE_TARGET := $(PRODUCT_OUT)/dtbo.img
-
 # Most specific paths must come first in possible_dtbo_dirs
 possible_dtbo_dirs = $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/dts $(KERNEL_OUT)/arch/arm/boot/dts
 

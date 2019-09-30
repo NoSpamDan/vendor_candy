@@ -164,7 +164,14 @@ kernelsavedefconfig:
 
 alldefconfig: $(KERNEL_OUT)
 	env KCONFIG_NOTIMESTAMP=true \
-		 $(PATH_OVERRIDE) $(MAKE_PREBUILT) -C $(KERNEL_SRC) O=$(KERNEL_OUT) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) alldefconfig
+		 $(call make-kernel-target,alldefconfig)
+
+ifeq ($(TARGET_NEEDS_DTBOIMAGE),true)
+$(BOARD_PREBUILT_DTBOIMAGE):
+	echo -e ${CL_GRN}"Building DTBO.img"${CL_RST}
+	$(call make-dtbo-target,$(KERNEL_DEFCONFIG))
+	$(call make-dtbo-target,dtbo.img)
+endif # TARGET_NEEDS_DTBOIMAGE
 
 endif # FULL_KERNEL_BUILD
 

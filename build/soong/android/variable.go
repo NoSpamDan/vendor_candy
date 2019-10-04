@@ -14,11 +14,11 @@ type Product_variables struct {
 		Header_libs []string
 		Shared_libs []string
 	}
-	Device_support_hwfde_perf struct {
+	Supports_hw_fde_perf struct {
 		Cflags []string
 		Shared_libs []string
 	}
-	Device_support_legacy_hwfde struct {
+	Supports_legacy_hw_fde struct {
 		Cflags []string
 	}
 	Device_support_wait_for_qsee struct {

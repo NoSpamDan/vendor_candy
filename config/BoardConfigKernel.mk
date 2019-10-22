@@ -278,8 +278,6 @@ endif
 
 KERNEL_ADDITIONAL_CONFIG_OUT := $(KERNEL_OUT)/.additional_config
 
-endif # FULL_KERNEL_BUILD
-
 endif # TARGET_NO_KERNEL
 
 ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)

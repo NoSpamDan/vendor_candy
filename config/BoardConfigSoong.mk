@@ -1,7 +1,6 @@
 PATH_OVERRIDE_SOONG := $(shell echo $(TOOLS_PATH_OVERRIDE) | sed -e 's|$$|$$$$|g')
 
 # Add variables that we wish to make available to soong here.
-ORIG_PATH := $(shell cat $(OUT_DIR)/.path_interposer_origpath)
 EXPORT_TO_SOONG := \
     KERNEL_ARCH \
     KERNEL_CC \

@@ -29,7 +29,7 @@ type Product_variables struct {
 	Supports_legacy_hw_fde struct {
 		Cppflags []string
 	}
-	Should_skip_waiting_for_qsee struct {
+	Device_support_wait_for_qsee struct {
 		Cflags []string
 	}
     Target_process_sdk_version_override struct {
@@ -80,7 +80,6 @@ type Product_variables struct {
 type ProductVariables struct {
     Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
     Bootloader_message_offset  *int `json:",omitempty"`
-    Device_support_wait_for_qsee  *bool `json:",omitempty"`
     Has_legacy_camera_hal1  *bool `json:",omitempty"`
     Uses_media_extensions   *bool `json:",omitempty"`
     Needs_text_relocations  *bool `json:",omitempty"`
@@ -89,7 +88,7 @@ type ProductVariables struct {
     Supports_hw_fde  *bool `json:",omitempty"`
     Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`
-	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
+    Device_support_wait_for_qsee  *bool `json:",omitempty"`
     Target_process_sdk_version_override *string `json:",omitempty"`
     Target_init_vendor_lib  *string `json:",omitempty"`
     Target_shim_libs  *string `json:",omitempty"`

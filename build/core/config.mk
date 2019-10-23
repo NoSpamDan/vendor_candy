@@ -17,7 +17,4 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 SELINUX_IGNORE_NEVERALLOWS := true
 endif
 
-BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/candy/build/core/system_rro.mk
-
-# Rules for QCOM targets
-include $(TOPDIR)vendor/candy/build/core/qcom_target.mk
+BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/candy/build/core/system_rro.mk

@@ -77,7 +77,14 @@ type Product_variables struct {
         Header_libs []string
         Shared_libs []string
     }
+
 	Needs_netd_direct_connect_rule struct {
+		Cflags []string
+	}
+	Build_pixelgapps struct {
+		Cflags []string
+	}
+	Build_pixelgapps_gcam struct {
 		Cflags []string
 	}
 }
@@ -109,4 +116,6 @@ type ProductVariables struct {
 	Uses_qcom_um_4_9_family  *bool `json:",omitempty"`
 	Uses_qcom_um_4_14_family  *bool `json:",omitempty"`
 	Needs_netd_direct_connect_rule  *bool `json:",omitempty"`
+    Build_pixelgapps  *bool `json:",omitempty"`
+    Build_pixelgapps_gcam  *bool `json:",omitempty"`
 }

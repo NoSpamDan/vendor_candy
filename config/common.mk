@@ -85,10 +85,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     candy-fonts
 
-# Copy all Candy-specific init rc files
-$(foreach f,$(wildcard vendor/candy/prebuilt/common/etc/init/*.rc),\
-	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml
